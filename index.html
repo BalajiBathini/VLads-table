@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlabs-Chemical Inventory</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="manifest" href="manifest.json">
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2 class="heading pb-3">Chemical <span style="color: #40a835;">Inventory</span></h2>
+        <div class="toolbar">
+            <button id="addRow" onclick="addRow()">Add Row</button>
+            <button id="moveUp" onclick="moveUp()">Move Up</button>
+            <button id="moveDown" onclick="moveDown()">Move Down</button>
+            <button id="deleteRow" onclick="deleteRow()">Delete Row</button>
+            <button id="refreshData" onclick="refreshData()">Refresh</button>
+            <button id="saveData" onclick="saveData()">Save</button>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" id="chemicalTable">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectAll" onclick="toggleSelectAll(this)"></th>
+                        <th onclick="sortTable(0)">ID</th>
+                        <th onclick="sortTable(1)">Chemical Name</th>
+                        <th onclick="sortTable(2)">Vendor</th>
+                        <th onclick="sortTable(3)">Density</th>
+                        <th onclick="sortTable(4)">Viscosity</th>
+                        <th onclick="sortTable(5)">Packaging</th>
+                        <th onclick="sortTable(6)">Pack Size</th>
+                        <th onclick="sortTable(7)">Unit</th>
+                        <th onclick="sortTable(8)">Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows will be  inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

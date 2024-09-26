@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "chemicalName": "Ammonium Persulfate",
+        "vendor": "LG Chem",
+        "density": 3525.92,
+        "viscosity": 60.63,
+        "packaging": "Bag",
+        "packSize": 100,
+        "unit": "kg",
+        "quantity": 6495.18
+    },
+    {
+        "id": 2,
+        "chemicalName": "Caustic Potash",
+        "vendor": "Formosa",
+        "density": 3172.15,
+        "viscosity": 48.22,
+        "packaging": "Bag",
+        "packSize": 100,
+        "unit": "kg",
+        "quantity": 8751.90
+    },
+    {
+        "id": 3,
+        "chemicalName": "Dimethylaminopropylamino",
+        "vendor": "LG Chem",
+        "density": 8435.37,
+        "viscosity": 12.62,
+        "packaging": "Barrel",
+        "packSize": 75,
+        "unit": "L",
+        "quantity": 5964.61
+    },
+    {
+        "id": 4,
+        "chemicalName": "Mono Ammonium Phosphate",
+        "vendor": "Sinopec",
+        "density": 1597.65,
+        "viscosity": 76.51,
+        "packaging": "Bag",
+        "packSize": 105,
+        "unit": "kg",
+        "quantity": 8183.73
+    },
+    {
+        "id": 5,
+        "chemicalName": "Ferric Nitrate",
+        "vendor": "DowDuPont",
+        "density": 364.04,
+        "viscosity": 14.90,
+        "packaging": "Bag",
+        "packSize": 105,
+        "unit": "kg",
+        "quantity": 4154.33
+    },
+    {
+        "id": 6,
+        "chemicalName": "n-Pentane",
+        "vendor": "Sinopec",
+        "density": 4535.26,
+        "viscosity": 66.76,
+        "packaging": "N/A",
+        "packSize": "N/A",
+        "unit": "t",
+        "quantity": 6272.34
+    },
+    {
+        "id": 7,
+        "chemicalName": "Glycol Ether PM",
+        "vendor": "LG Chem",
+        "density": 6495.18,
+        "viscosity": 72.12,
+        "packaging": "Bag",
+        "packSize": 250,
+        "unit": "kg",
+        "quantity": 8749.54
+    },
+    {
+        "id": 8,
+        "chemicalName": "Sodium Hydroxide",
+        "vendor": "Dow Chemicals",
+        "density": 2100.45,
+        "viscosity": 55.60,
+        "packaging": "Drum",
+        "packSize": 200,
+        "unit": "L",
+        "quantity": 4200.78
+    },
+    {
+        "id": 9,
+        "chemicalName": "Potassium Chloride",
+        "vendor": "BASF",
+        "density": 1980.75,
+        "viscosity": 35.80,
+        "packaging": "Bag",
+        "packSize": 150,
+        "unit": "kg",
+        "quantity": 3100.50
+    },
+    {
+        "id": 10,
+        "chemicalName": "Sulfuric Acid",
+        "vendor": "DuPont",
+        "density": 4200.56,
+        "viscosity": 65.10,
+        "packaging": "Container",
+        "packSize": 50,
+        "unit": "L",
+        "quantity": 8700.12
+    },
+    {
+        "id": 11,
+        "chemicalName": "Ethanol",
+        "vendor": "ExxonMobil",
+        "density": 789.30,
+        "viscosity": 25.67,
+        "packaging": "Barrel",
+        "packSize": 100,
+        "unit": "L",
+        "quantity": 4500.25
+    },
+    {
+        "id": 12,
+        "chemicalName": "Sodium Carbonate",
+        "vendor": "LG Chem",
+        "density": 2530.90,
+        "viscosity": 42.40,
+        "packaging": "Bag",
+        "packSize": 100,
+        "unit": "kg",
+        "quantity": 7600.45
+    },
+    {
+        "id": 13,
+        "chemicalName": "Hydrogen Peroxide",
+        "vendor": "Sinopec",
+        "density": 1440.50,
+        "viscosity": 35.50,
+        "packaging": "Drum",
+        "packSize": 50,
+        "unit": "L",
+        "quantity": 5500.36
+    },
+    {
+        "id": 14,
+        "chemicalName": "Methanol",
+        "vendor": "Formosa",
+        "density": 792.50,
+        "viscosity": 23.60,
+        "packaging": "Barrel",
+        "packSize": 200,
+        "unit": "L",
+        "quantity": 7800.67
+    },
+    {
+        "id": 15,
+        "chemicalName": "Acetone",
+        "vendor": "Dow Chemicals",
+        "density": 784.50,
+        "viscosity": 19.70,
+        "packaging": "Drum",
+        "packSize": 100,
+        "unit": "L",
+        "quantity": 3400.44
+    }
+]

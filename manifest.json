@@ -1,0 +1,20 @@
+{
+    "name": "Vlabs Chemical Inventory",
+    "short_name": "Chem Inventory",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#f8f9fa",
+    "theme_color": "#40a835",
+    "icons": [
+        {
+            "src": "assets/img/lab-icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/img/chemistry.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
