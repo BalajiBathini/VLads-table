@@ -1,5 +1,6 @@
 let chemicals = [];
 let sortOrder = true; 
+
 // Function to fetch data from JSON file
 async function fetchData() {
     try {
@@ -14,6 +15,7 @@ async function fetchData() {
     }
 }
 
+// Function to load table data
 function loadTableData() {
     const tableBody = document.getElementById('tableBody'); 
     tableBody.innerHTML = '';
@@ -44,18 +46,19 @@ function addRow() {
         <td><input type="checkbox" class="select-checkbox"></td>
         <td>${newId}</td>
         <td><input type="text" id="newchemicalName" placeholder="Chemical Name"></td>
-        <td><input type="text" id="newvendor" placeholder="vendor"></td>
-        <td><input type="number" id="newdensity" placeholder="density"></td>
-        <td><input type="number" id="newviscosity" placeholder="viscosity"></td>
-        <td><input type="text" id="newpackaging" placeholder="packaging"></td>
+        <td><input type="text" id="newvendor" placeholder="Vendor"></td>
+        <td><input type="number" id="newdensity" placeholder="Density"></td>
+        <td><input type="number" id="newviscosity" placeholder="Viscosity"></td>
+        <td><input type="text" id="newpackaging" placeholder="Packaging"></td>
         <td><input type="text" id="newpackSize" placeholder="Pack Size"></td>
-        <td><input type="text" id="newunit" placeholder="unit"></td>
-        <td><input type="number" id="newquantity" placeholder="quantity"></td>
+        <td><input type="text" id="newunit" placeholder="Unit"></td>
+        <td><input type="number" id="newquantity" placeholder="Quantity"></td>
         <td><button onclick="saveNewRow()">Save</button></td>
     `;
     document.getElementById('tableBody').appendChild(newRow);
 }
 
+// Function to save the newly added row
 function saveNewRow() {
     const newChemical = {
         id: chemicals.length ? chemicals[chemicals.length - 1].id + 1 : 1,
@@ -69,7 +72,6 @@ function saveNewRow() {
         quantity: parseInt(document.getElementById('newquantity').value)
     };
 
-    // Validate inputs
     if (!newChemical.chemicalName || !newChemical.vendor || isNaN(newChemical.density) || 
         isNaN(newChemical.viscosity) || !newChemical.packaging || 
         !newChemical.packSize || !newChemical.unit || isNaN(newChemical.quantity)) {
@@ -184,10 +186,8 @@ function moveUp() {
             const currentIndex = Array.from(row.parentNode.children).indexOf(row);
             const previousIndex = currentIndex - 1;
 
-            // Swap in the array
             [chemicals[currentIndex], chemicals[previousIndex]] = [chemicals[previousIndex], chemicals[currentIndex]];
 
-            // Move the row in the DOM
             row.parentNode.insertBefore(row, previousRow);
         }
     });
@@ -204,60 +204,28 @@ function moveDown() {
             const currentIndex = Array.from(row.parentNode.children).indexOf(row);
             const nextIndex = currentIndex + 1;
 
-            // Swap in the array
             [chemicals[currentIndex], chemicals[nextIndex]] = [chemicals[nextIndex], chemicals[currentIndex]];
 
-            // Move the row in the DOM
             row.parentNode.insertBefore(nextRow, row);
         }
     });
 }
 
-// Function to refresh the data
-function refreshData() {
-    fetchData();
-}
-
-// Function to save the data (this is a placeholder, actual implementation may vary)
-function saveData() {
-    console.log("Data saved:", chemicals);
-    alert("Data saved successfully!");
-}
-// Function to sort the table
+// Function to sort the table by column
 function sortTable(columnIndex) {
-    const tableBody = document.getElementById('tableBody');
-    const rows = Array.from(tableBody.rows);
-    
-    // Get the current sort direction
-    sortOrder = !sortOrder;
+    chemicals.sort((a, b) => {
+        const valA = Object.values(a)[columnIndex - 1];
+        const valB = Object.values(b)[columnIndex - 1];
 
-    // Sort rows based on the selected column
-    rows.sort((a, b) => {
-        const cellA = a.cells[columnIndex].innerText;
-        const cellB = b.cells[columnIndex].innerText;
-
-        if (!isNaN(cellA) && !isNaN(cellB)) {
-            return sortOrder ? cellA - cellB : cellB - cellA; // Numeric sort
-        } else {
-            return sortOrder ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA); // String sort
+        if (typeof valA === 'string') {
+            return sortOrder ? valA.localeCompare(valB) : valB.localeCompare(valA);
         }
+        return sortOrder ? valA - valB : valB - valA;
     });
 
-    // Clear the table and append sorted rows
-    tableBody.innerHTML = '';
-    rows.forEach(row => tableBody.appendChild(row));
+    sortOrder = !sortOrder;
+    loadTableData();
 }
 
-// Call fetchData to load the initial data
-fetchData();
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-            .then(registration => {
-                console.log('Service Worker registered with scope:', registration.scope);
-            })
-            .catch(error => {
-                console.error('Service Worker registration failed:', error);
-            });
-    });
-}
+// Fetch data when the page loads
+document.addEventListener('DOMContentLoaded', fetchData);
