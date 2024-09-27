@@ -55,7 +55,7 @@ button {
     padding: 8px 15px; /* Increased padding for better touch targets */
     font-size: 1em; /* Use relative units for font size */
     
-    color: white;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
