@@ -46,7 +46,7 @@ body {
     .toolbar button img {
         width: 18px; /* Further reduce icon size for very small screens */
         height: 18px;
-        margin-right: 5px; /* Reduce spacing for smaller buttons */
+      
     }
 }
 
@@ -123,12 +123,6 @@ tr:hover {
         font-size: 0.8em; /* Further reduce font size */
     }
 
-    .toolbar {
-        text-align: center; /* Center buttons on smaller screens */
-        display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: flex-start; /* Align buttons to the start */
-    }
 
     button {
         text-align: right;
