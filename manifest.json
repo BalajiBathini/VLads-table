@@ -1,7 +1,7 @@
 {
     "name": "Vlabs Chemical Inventory",
     "short_name": "Chem Inventory",
-    "start_url": "./index.html",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#f8f9fa",
     "theme_color": "#40a835",
