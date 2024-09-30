@@ -7,7 +7,7 @@ const urlsToCache = [
     'assets/js/jquery-3.7.1.min.js',
     'assets/js/bootstrap.bundle.min.js',
     'assets/js/script.js',
-    'index.html'  // Add other files you want to cache
+      // Add other files you want to cache
 ];
 
 // Install Service Worker
